@@ -3,7 +3,7 @@ const config = require('./config');
 
 const app = express();
 
-app.get('/', (res, req) => {
+app.get('/', (req, res) => {
 res.send('Home page');
 });
 
