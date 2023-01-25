@@ -27,6 +27,20 @@
       "description": "a normal rubik's cube",
       "imageUrl": "https://i.ebayimg.com/images/g/Fl4AAOSwWsxhdbKX/s-l1600.jpg",
       "difficultyLevel": "3"
+    },
+    {
+      "name": "test",
+      "description": "j",
+      "imageUrl": "https://i5.walmartimages.com/asr/d66e14e2-73bd-49d7-a019-a546fdd71558.877779a8c666996d5f159d078c407823.jpeg",
+      "difficultyLevel": "1",
+      "id": 5
+    },
+    {
+      "name": "Fresh Cube",
+      "description": "cube",
+      "imageUrl": "https://static-01.daraz.lk/p/bea2f791aa9933c2933b5bffdeb8fdca.jpg",
+      "difficultyLevel": "1",
+      "id": 6
     }
   ]
 }
