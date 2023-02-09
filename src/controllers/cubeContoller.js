@@ -28,11 +28,13 @@ exports.getDetails = async (req, res) => {
         .populate('accessories')
         .lean();
 
+        
     if (!cube) {
         return res.redirect('/404');
     }
-
+   
     const isOwner = cubeUtils.isOwner(req.user, cube);
+    
 
     res.render('cube/details', { cube, isOwner });
 };
@@ -56,6 +58,10 @@ exports.postAttachAccessory = async (req, res) => {
 exports.getEditCube = async (req, res) => {
     const cube = await cubeService.getOne(req.params.cubeId).lean();
     const difficultyLevels = cubeUtils.generateDifficultyLevels(cube.difficultyLevel);
+
+    if (!cubeUtils.isOwner(req.user, cube)) {
+        throw new Error('You are not an owner!');
+    }
 
     res.render('cube/edit', { cube, difficultyLevels });
 };
